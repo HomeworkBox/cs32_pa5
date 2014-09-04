@@ -1,3 +1,11 @@
+//
+//  screen.h
+//  pa5
+//
+//  Created by Tyler Weimin Ouyang on 9/3/14.
+//  Copyright (c) 2014 FT: Felicia Truong & Tyler Weimin Ouyang. All rights reserved.
+//
+
 #ifndef __SCREEN_H__
 #define __SCREEN_H__
 
