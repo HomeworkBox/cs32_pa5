@@ -10,6 +10,7 @@
 #include "screen.h"
 
 int main() {
+    
 	using namespace tui;
 
 	screen scr;
@@ -22,6 +23,6 @@ int main() {
 	scr.set_circle(30, 15, 10, ptblue);
 
 	scr.render();
-
+    
 	return 0;
 }
