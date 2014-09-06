@@ -65,7 +65,7 @@ public:
     void draw(tui::screen &scr, const pen &p) const;
 };
 
-class circle{
+class circle: public shape{
 private:
     int _x;
     int _y;
@@ -86,9 +86,9 @@ public:
 
 class canvas{
 private:
-    //tui::screen _scr;
+    tui::screen _scr;
 public:
-    canvas(tui::screen);
+    canvas(tui::screen&);
     void add(shape*, pen);
     void clear();
     void show();

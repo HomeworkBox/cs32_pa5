@@ -19,13 +19,17 @@ int main() {
     scr.clear();
     
     pen pen_magenta(color::magenta, color::system_default, '&', true);
-    //scr.set_rect(0, 0, scr.ncols() - 1, scr.nrows() - 1, pen_magenta.returnP());
-    //scr.set_circle(30, 15, 10, pen_magenta.returnP());
-    rectangle::rectangle rec1(0, 0, 7, 7 );
+    pen pen_blue(color::blue, color::black, '$', true);
+
+    rectangle rec1(0, 0, 7, 7 );
     rec1.draw(scr, pen_magenta);
-    circle::circle cir1(5,5,5);
+    circle cir1(5,5,5);
     cir1.draw(scr, pen_magenta);
-    //scr.set_rect(0, 0, scr.ncols() - 1, scr.nrows() - 1, pen_magenta.returnP());
+    
+    canvas cas(scr);
+    shape *test = new circle(6,6,6);
+    cas.add(test, pen_blue);
+    
     scr.render();
     return 0;
 }
