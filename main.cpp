@@ -46,7 +46,7 @@ int main() {
 	for(int i = 1; i <= (scr.ncols() - 2) / 8; i++) {
 		shape* addr = (shape*)alloca(sizeof(rectangle));
 		trash.push_back(addr);
-		new (addr) rectangle(i, i, width, height);
+		new (addr) rectangle(i, i, [, height);
 		canv.add(addr, pens[i % pens.size()]);
 		width -= 2;
 		height -= 2;
