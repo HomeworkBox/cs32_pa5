@@ -36,7 +36,11 @@ rectangle::rectangle(int x0, int y0, int x1, int y1): _x0(x0), _y0(y0), _x1(x1),
 }
 
 void rectangle::draw(tui::screen &scr, const pen &p) const{
-    scr.set_rect(get_x0(), get_y0(), get_x1()-1, get_y1()-1, p.returnP());
+    scr.set_rect(get_x0(), get_y0(), get_x0()+get_x1()-2, get_y0()+get_y1()-2, p.returnP());
+}
+
+void rectangle::draw(int x0, int y0, int x1, int y1, tui::screen &scr, pen p){
+    scr.set_rect(x0,y0,x1-1,y1-1,p.returnP());
 }
 
 //class circle
@@ -56,16 +60,19 @@ void canvas::add(shape* sh, pen p){
     _v.push_back(s);
     _count++;
 }
+void canvas::add(rectangle* sh, pen p){
+    sh->draw(sh->get_x0(),sh->get_y0(),sh->get_x1(),sh->get_y1(), _scr, p);
+}//overload add for rectangle
 
 void canvas::show(){
     for (int i=0; i<_count; i++){
         _v[i].first->draw(_scr, _v[i].second);
     }
     _scr.render();
+    clear();
 }
 
 void canvas::clear(){
-    for (int i=0; i<_count; i++){
-        delete _v[i].first;
-    }
+    _v.clear();
+    _scr.clear();
 }
