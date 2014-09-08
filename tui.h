@@ -92,7 +92,7 @@ public:
 //
 class canvas{
 private:
-    tui::screen *_scr;
+    tui::screen _scr;
     std::vector< std::pair<shape*, pen> > _v;
 public:
     canvas(tui::screen&);
