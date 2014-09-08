@@ -41,12 +41,12 @@
                   symbolName = "canvas::canvas(tui::screen&amp;)"
                   moduleName = "pa5tyler"
                   urlString = "file:///Users/tyler/Developer/CS32/cs32_pa5/tui.cpp"
-                  timestampString = "431855749.527106"
+                  timestampString = "431856541.100053"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
                   endingLineNumber = "54"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -55,7 +55,7 @@
                   symbolName = "canvas::canvas(tui::screen&amp;)"
                   moduleName = "pa5tyler"
                   urlString = "file:///Users/tyler/Developer/CS32/cs32_pa5/tui.cpp"
-                  timestampString = "431855749.527244"
+                  timestampString = "431856541.100187"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
@@ -63,6 +63,22 @@
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../main.cpp"
+            timestampString = "431856734.066807"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "main()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
