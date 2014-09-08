@@ -160,16 +160,16 @@ private:
 	}
 	void update_size() {
 #ifdef TIOCGSIZE
-		struct ttysize ts;
-		ioctl(STDIN_FILENO, TIOCGSIZE, &ts);
-		_ncols = ts.ts_cols;
-		_nrows = ts.ts_lines;
-#elif TIOCGWINSZ
-		struct winsize ts;
-		ioctl(STDIN_FILENO, TIOCGWINSZ, &ts);
-		_ncols = ts.ws_col;
-		_nrows = ts.ws_row;
-#else
+//		struct ttysize ts;
+//		ioctl(STDIN_FILENO, TIOCGSIZE, &ts);
+//		_ncols = ts.ts_cols;
+//		_nrows = ts.ts_lines;
+//#elif TIOCGWINSZ
+//		struct winsize ts;
+//		ioctl(STDIN_FILENO, TIOCGWINSZ, &ts);
+//		_ncols = ts.ws_col;
+//		_nrows = ts.ws_row;
+//#else
 		_ncols = 80;
 		_nrows = 40;
 #endif
