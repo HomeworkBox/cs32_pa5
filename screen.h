@@ -156,7 +156,7 @@ private:
 	}
 	void dispose() {
 		if(_buffer)
-			delete [] _buffer;
+			delete[] _buffer;
 	}
 	void update_size() {
 #ifdef TIOCGSIZE

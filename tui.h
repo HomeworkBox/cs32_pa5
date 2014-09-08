@@ -94,7 +94,6 @@ class canvas{
 private:
     tui::screen _scr;
     std::vector< std::pair<shape*, pen> > _v;
-    int _count=0;
 public:
     canvas(tui::screen&);
     void add(shape*, pen);

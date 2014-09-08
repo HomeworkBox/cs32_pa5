@@ -51,21 +51,20 @@ void circle::draw(tui::screen &scr, const pen &p) const{
 }
 
 //class canvas
-canvas::canvas(tui::screen &scr): _scr(scr){
+canvas::canvas(tui::screen &scr){
 }
 
 void canvas::add(shape* sh, pen p){
     std::pair< shape*, pen > s;
     s = std::make_pair(sh,p);
     _v.push_back(s);
-    _count++;
 }
 void canvas::add(rectangle* sh, pen p){
     sh->draw(sh->get_x0(),sh->get_y0(),sh->get_x1(),sh->get_y1(), _scr, p);
 }//overload add for rectangle
 
 void canvas::show(){
-    for (int i=0; i<_count; i++){
+    for (int i=0; i<_v.size(); i++){
         _v[i].first->draw(_scr, _v[i].second);
     }
     _scr.render();

@@ -17,6 +17,8 @@ int main() {
     
     screen scr;
     scr.clear();
+    canvas cas(scr);
+
     pen pen_magenta(color::magenta, color::system_default, '&', true);
     pen pen_blue(color::blue, color::black, '$', true);
 
@@ -27,28 +29,19 @@ int main() {
     circle cir1(5,5,5);
     circle cir2(3,3,3);
     //cir1.draw(scr, pen_magenta);
-    canvas cas(scr);
-    shape *test = (shape*)alloca(sizeof(circle));
+      shape *test = (shape*)alloca(sizeof(circle));
     shape *test2 = (shape*)alloca(sizeof(rectangle));
 
-   // trash.push_back(test);
+//   // trash.push_back(test);
     new (test) circle(6, 6, 6);
     new (test2) rectangle(0, 0, scr.ncols(), scr.nrows());
-    std::vector< std::pair<shape*, pen> > ve;
-    std::pair< shape*, pen > s;
-    s = std::make_pair(&rec1,pen_blue);
-    ve.push_back(s);
-    s = std::make_pair(&cir1,pen_magenta);
-    ve.push_back(s);
-    cas.add(test, pen_blue);
-    cas.add(test2, pen_magenta);
-    
-    for (int i=0; i<2; i++){
-        ve[i].first->draw(scr, ve[i].second);
-    }
-    scr.set_rect(0, 0, scr.ncols(), scr.nrows() - 1, ptred);
+
+//    cas.add(test, pen_blue);
+//    cas.add(test2, pen_magenta);
+//    
 //    scr.render();
     
     cas.show();
+    cas.clear();
     return 0;
 }

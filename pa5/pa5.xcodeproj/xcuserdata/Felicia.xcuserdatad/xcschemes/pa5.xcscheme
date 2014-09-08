@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2FC9732E19BCF44800E00576"
-               BuildableName = "pa5"
+               BlueprintIdentifier = "9DDBDC5619BD809900A6AE09"
+               BuildableName = "pa5.app"
                BlueprintName = "pa5"
                ReferencedContainer = "container:pa5.xcodeproj">
             </BuildableReference>
@@ -28,12 +28,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9DDBDC7119BD809900A6AE09"
+               BuildableName = "pa5Tests.xctest"
+               BlueprintName = "pa5Tests"
+               ReferencedContainer = "container:pa5.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FC9732E19BCF44800E00576"
-            BuildableName = "pa5"
+            BlueprintIdentifier = "9DDBDC5619BD809900A6AE09"
+            BuildableName = "pa5.app"
             BlueprintName = "pa5"
             ReferencedContainer = "container:pa5.xcodeproj">
          </BuildableReference>
@@ -51,8 +61,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FC9732E19BCF44800E00576"
-            BuildableName = "pa5"
+            BlueprintIdentifier = "9DDBDC5619BD809900A6AE09"
+            BuildableName = "pa5.app"
             BlueprintName = "pa5"
             ReferencedContainer = "container:pa5.xcodeproj">
          </BuildableReference>
@@ -69,8 +79,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FC9732E19BCF44800E00576"
-            BuildableName = "pa5"
+            BlueprintIdentifier = "9DDBDC5619BD809900A6AE09"
+            BuildableName = "pa5.app"
             BlueprintName = "pa5"
             ReferencedContainer = "container:pa5.xcodeproj">
          </BuildableReference>
