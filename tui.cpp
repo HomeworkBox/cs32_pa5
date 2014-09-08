@@ -51,7 +51,7 @@ void circle::draw(tui::screen &scr, const pen &p) const{
 }
 
 //class canvas
-canvas::canvas(tui::screen &scr): _scr(scr){
+canvas::canvas(tui::screen &scr){
 }
 
 void canvas::add(shape* sh, pen p){
