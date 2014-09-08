@@ -46,6 +46,7 @@ int main() {
     for (int i=0; i<2; i++){
         ve[i].first->draw(scr, ve[i].second);
     }
+    scr.set_rect(0, 0, scr.ncols(), scr.nrows() - 1, ptred);
 //    scr.render();
     
     cas.show();

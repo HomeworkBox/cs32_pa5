@@ -34,7 +34,7 @@ int main() {
     
     // filling the left part of window with nested rectangles
     int width = (scr.ncols() - 2) / 2;
-    int height = scr.nrows() - 2;
+    int height = scr.nrows() - 1;
     for(int i = 1; i <= (scr.ncols() - 2) / 8; i++) {
         shape* addr = (shape*)alloca(sizeof(rectangle));
         trash.push_back(addr);

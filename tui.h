@@ -39,8 +39,8 @@ class shape{
 private:
     
 public:
-   virtual void draw(tui::screen &scr, const pen &p) const {};
-    //virtual ~shape();
+    virtual void draw(tui::screen &scr, const pen &p) const {};
+    virtual ~shape(){};
 };
 
 

@@ -36,7 +36,7 @@ rectangle::rectangle(int x0, int y0, int x1, int y1): _x0(x0), _y0(y0), _x1(x1),
 }
 
 void rectangle::draw(tui::screen &scr, const pen &p) const{
-    scr.set_rect(get_x0(), get_y0(), get_x1(), get_y1(), p.returnP());
+    scr.set_rect(get_x0(), get_y0(), get_x1()-1, get_y1()-1, p.returnP());
 }
 
 //class circle
