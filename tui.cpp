@@ -21,6 +21,8 @@ const int color::white = 7;
 const int color::system_default = 9;
 
 //class pen
+pen::pen(){}
+pen::pen(const pen& other): _fg_color(other._fg_color), _bg_color(other._bg_color), _sign(other._sign), _brightness(other._brightness){}
 pen::pen(int fg_color, int bg_color, char sign, bool brightness):
 _fg_color(fg_color), _bg_color(bg_color), _sign(sign), _brightness(brightness){
 }
@@ -48,6 +50,22 @@ void circle::draw(tui::screen &scr, const pen &p) const{
 canvas::canvas(tui::screen &scr): _scr(scr){
 }
 
-void canvas::add(shape* shape, pen p){
-    shape->draw(_scr,p);
+void canvas::add(shape* sh, pen p){
+    std::pair< shape*, pen > s;
+    s = std::make_pair(sh,p);
+    _v.push_back(s);
+    _count++;
+}
+
+void canvas::show(){
+    for (int i=0; i<_count; i++){
+        _v[i].first->draw(_scr, _v[i].second);
+    }
+    _scr.render();
+}
+
+void canvas::clear(){
+    for (int i=0; i<_count; i++){
+        delete _v[i].first;
+    }
 }

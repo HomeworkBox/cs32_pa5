@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 FT: Felicia Truong & Tyler Weimin Ouyang. All rights reserved.
 //
 #include "screen.h"
-
+#include <vector>
 #ifndef pa5_tui_h
 #define pa5_tui_h
 class color{
@@ -29,6 +29,8 @@ private:
     char _sign;
     bool _brightness;
 public:
+    pen();
+    pen(const pen& other);
     pen(int fg_color, int bg_color, char sign, bool brightness);
     tui::point returnP() const;
 };
@@ -50,6 +52,7 @@ private:
     int _y1;
 public:
     rectangle(int x0, int y0, int x1, int y1);
+    ~rectangle(){};
     int get_x0() const{
         return _x0;
     }
@@ -72,6 +75,7 @@ private:
     int _rad;
 public:
     circle(int x, int y, int rad);
+    ~circle(){};
     int get_x() const{
         return _x;
     }
@@ -83,10 +87,12 @@ public:
     }
     void draw(tui::screen &scr, const pen &p) const;
 };
-
+//
 class canvas{
 private:
     tui::screen _scr;
+    std::vector< std::pair<shape*, pen> > _v;
+    int _count=0;
 public:
     canvas(tui::screen&);
     void add(shape*, pen);
